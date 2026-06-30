@@ -5,7 +5,7 @@ def calculate_demographic_data(print_data=True):
     df = pd.read_csv('adult.data.csv')
 
     # 1. ¿Cuántas personas de cada raza están representadas?
-    race_count = df['race'].value_counts()
+    race_count = df['race'].value_counts().tolist()
 
     # 2. ¿Cuál es la edad promedio de los hombres?
     average_age_men = round(df[df['sex'] == 'Male']['age'].mean(), 1)
